@@ -1,0 +1,1 @@
+const { spawnSync } = require('child_process'); const path=require('path'); const vsce=path.join(process.cwd(),'node_modules','.bin','vsce'); if (require('fs').existsSync(vsce)) { const r=spawnSync(vsce,['package'],{stdio:'inherit'}); process.exit(r.status);} else { console.log('vsce not available locally; skipping package'); process.exit(0); }
