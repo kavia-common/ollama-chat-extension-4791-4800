@@ -1,8 +1,19 @@
 {
   "name": "ollamachat-assistant-native",
   "version": "0.0.1",
-  "engines": { "vscode": "^1.60.0", "node": ">=16" },
+  "engines": {
+    "vscode": "^1.60.0",
+    "node": ">=16"
+  },
   "main": "out/extension.js",
-  "scripts": { "build": "tsc -p tsconfig.json", "prepublish": "npm run build", "test": "jest --config jest.config.js --passWithNoTests", "package": "node ./scripts/package-if-available.js" },
-  "devDependencies": {}
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepublish": "npm run build",
+    "test": "jest --config jest.config.js --passWithNoTests",
+    "package": "node ./scripts/package-if-available.js"
+  },
+  "devDependencies": {
+    "vsce": "^2.1.0",
+    "jest": "^29.0.0"
+  }
 }
