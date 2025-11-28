@@ -1,0 +1,58 @@
+{
+  "name": "ollama-chat-extension",
+  "displayName": "Ollama Chat",
+  "description": "A VS Code extension providing an in-editor chat interface powered by local Ollama LLMs.",
+  "version": "0.0.1",
+  "publisher": "localdev",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:ollamaChatView",
+    "onCommand:ollamaChat.open"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "ollamaChatContainer",
+          "title": "Ollama Chat",
+          "icon": "media/icon.png"
+        }
+      ]
+    },
+    "views": {
+      "ollamaChatContainer": [
+        {
+          "id": "ollamaChatView",
+          "name": "Ollama Chat"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "ollamaChat.open",
+        "title": "Open Ollama Chat"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint . --ext .ts,.tsx",
+    "build": "npm run compile",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.3",
+    "@types/vscode": "^1.84.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {}
+}

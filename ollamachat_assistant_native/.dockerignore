@@ -1,0 +1,22 @@
+# Ignore node modules on host
+node_modules
+npm-debug.log
+yarn.lock
+pnpm-lock.yaml
+
+# VScode local files
+.vscode
+.vscode-test
+
+# Build artifacts
+dist
+out
+*.vsix
+
+# Git
+.git
+.gitignore
+
+# OS files
+.DS_Store
+Thumbs.db
